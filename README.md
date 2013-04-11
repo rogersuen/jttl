@@ -6,9 +6,9 @@ JSP tag library that implements "composite view" pattern.
 
 The tag library has only three tags:
 
-- <t:view>
-- <t:render>
-- <t:param>
+	<t:view>   - defines a view
+	<t:render> - renders a view
+	<t:param>  - defines a parameter for a view
 
 Using the Tag Library
 ---------------------
