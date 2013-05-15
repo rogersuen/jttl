@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project 
-	xmlns="http://maven.apache.org/POM/4.0.0" 
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
+	<prerequisites>
+		<maven>3.0.3</maven>
+	</prerequisites>
 
 	<groupId>org.javaplus</groupId>
 	<artifactId>javaplus-jttl-parent</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
-	<name>javaplus-jttl-parent</name>
+	<name>JavaPlus JSP Template Tag Library</name>
+	<url>https://github.com/rogersuen/jttl</url>
+	<description>An extreme simple, yet powerful JSP tag library that implements "composite view" pattern.</description>
 
 	<modules>
 		<module>taglib</module>
@@ -20,6 +25,35 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<developers>
+		<developer>
+			<name>Roger Suen</name>
+			<email>rogersuen@live.com</email>
+			<roles>
+				<role>owner</role>
+			</roles>
+			<timezone>+8</timezone>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/rogersuen/jttl.git</url>
+		<connection>scm:git://github.com/rogersuen/jttl.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:rogersuen/jttl.git</developerConnection>
+	</scm>
+
+	<issueManagement>
+		<url>https://github.com/rogersuen/jttl/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
 
 	<build>
 		<plugins>
@@ -39,6 +73,15 @@
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
+			</plugin>
+			<!--
+			Enable maven 3 reporting
+			See: http://stackoverflow.com/questions/4675175
+			-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.0</version>
 			</plugin>
 		</plugins>
 	</build>
@@ -69,7 +112,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
